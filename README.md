@@ -1,2 +1,3 @@
-# latex-utp-asignaciones
-Template para tareas de la utp
+# 📑 Template asignaciones UTP 🛠️
+
+Template de documentos de la UTP como: tareas, laboratorios, investigaciones o asignaciones.
