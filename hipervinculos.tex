@@ -1,0 +1,40 @@
+% ------------------------------
+% Automatizar llamar [doc]umento [ex]terno -> \exdoc
+% ------------------------------
+\newcommand{\exdoc}[1]{
+  \externaldocument{#1/ref-#1}
+}
+
+% [It]erar temas con [doc]umento [ex]terno -> \itexdoc
+%
+\newcommand{\itexdoc}[1]{
+  \forcsvlist{\exdoc}{#1}
+}
+
+% Crear referencias a los documentos de los temas
+%
+\itexdoc{\temas}
+
+% ------------------------------
+% Automatizar crear hipervinculo -> \link
+% ------------------------------
+% NOTE: Se crea el hipervinculo partir de la referencia al documento externo
+% por eso es importante definir el documento externo antes de esto
+\newcommand{\link}[1]{
+  \expandafter\newcommand\csname #1\endcsname{
+    \unskip\hyperref[lbl-#1]{#1}\ignorespaces
+  }
+}
+
+% [It]erar temas con \link -> \itlink
+%
+\newcommand{\itlink}[1]{
+  \forcsvlist{\link}{#1}
+}
+
+% Crear hipervinculos
+% Temas
+\expandafter\itlink\expandafter{\temas}
+
+% Subtemas
+\expandafter\itlink\expandafter{\subtemas}

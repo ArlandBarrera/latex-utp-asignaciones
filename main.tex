@@ -1,0 +1,42 @@
+\documentclass{extbook}
+
+% ------------------------------
+% Preambulo
+% ------------------------------
+
+% Paquetes
+\input{paquetes.tex}
+
+% Renombrar comandos
+\input{renombrar-comandos.tex}
+
+% Nuevos comandos
+\input{nuevos-comandos.tex}
+
+% Estilo titulo capitulo
+\input{estilos.tex}
+
+\mainmatter
+
+% ------------------------------
+% Inicio de documento
+% ------------------------------
+
+\begin{document}
+
+\input{portada.tex}
+
+\tableofcontents
+\listoffigures
+% \listoftables
+% \listof{grafica}{Lista de gráficas}
+% \listof{ecuacion}{Lista de ecuaciones}
+
+% Crear input de los temas de los capitulos
+\expandafter\itincap\expandafter{\temas}
+
+% Bibliografia
+% \bibliographystyle{ieeetr}
+% \bibliography{referencias}
+
+\end{document}

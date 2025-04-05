@@ -1,0 +1,28 @@
+% ------------------------------
+% Capitulo
+% ------------------------------
+% formato de \titleformat en la documentacion
+% \titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+
+\titleformat{\chapter}[display]
+  {\bfseries\huge} % Estilo titulo
+  {\hfill\Large} % Alinear derecha
+  {0pt} % Espacio entre numero de capitulo y titulo
+  {\vspace{-2cm}\titlerule\vspace{1ex}\hfill} % Regla arriba y alinear titulo derecha
+  [\vspace{1ex}\titlerule] % Regla abajo de titulo
+
+% Eliminar pagina extra tras fin de capitulo
+\makeatletter
+\patchcmd{\chapter}
+  {\if@openright\cleardoublepage\else\clearpage\fi}
+  {\clearpage}
+  {}{}
+\makeatother
+
+% ------------------------------
+% Profundidad de secciones y toc
+% ------------------------------
+% NOTE:  Esto abilita subsubsection como seccion valida
+%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}

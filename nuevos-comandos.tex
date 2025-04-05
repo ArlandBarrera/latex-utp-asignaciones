@@ -1,0 +1,63 @@
+% ------------------------------
+% Lista de temas
+% ------------------------------
+% NOTE: Elementos en una lista
+% Separar: es recomendable usar comas, no espacios
+% Nombrar: NO USAR guion (-), barra baja (_) o espacio (' ')
+%
+% Temas de capitulos
+\newcommand{\temas}{temauno,temados}
+
+% Subtemas especificos dentro de los capitulos
+\newcommand{\subtemas}{subtemauno,subsubtemauno,profundouno,subtemados,subsubtemados,profundodos}
+
+% NOTE: Si no se necesitan hipervinculos
+% Eliminar los links de temas y subtemas
+% Comentar o eliminar la linea o el archivo de abajo
+%
+\input{hipervinculos.tex}
+
+% ------------------------------
+% Automatizar [in]put a [cap]itulos -> \incap
+% ------------------------------
+\newcommand{\incap}[1]{
+  \input{#1/ref-#1.tex}
+}
+
+% [It]erar temas con [in]put [cap]itulo -> \itincap
+%
+\newcommand{\itincap}[1]{
+  \forcsvlist{\incap}{#1}
+}
+
+% ------------------------------
+% Lista de graficas
+% Nuevo entorno flotante para graficas
+% ------------------------------
+% \newfloat{grafica}{htbp}{lop}
+% \floatname{grafica}{Gráfica}
+
+% ------------------------------
+% Lista de ecuaciones
+% Nuevo entorno flotante para ecuaciones
+% ------------------------------
+% \newfloat{ecuacion}{htbp}{loe}[chapter]
+% \floatname{ecuacion}{Ecuación}
+
+% Listar y crear caja (box) alrededor de una ecuacion
+%
+% \newcommand{\listequbox}[3]{
+%   \begin{ecuacion}
+%     \begin{equation}
+%       \ensuremath{\boxed{#1}}
+%       \label{#2}
+%     \end{equation}
+%     \caption{#3}
+%   \end{ecuacion}
+% }
+
+% ------------------------------
+% Texto reutilizable - Strings
+% ------------------------------
+
+\input{strings.tex}
