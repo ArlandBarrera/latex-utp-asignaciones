@@ -9,14 +9,23 @@ documento
 ├── imagenes
 │   ├── fisc.png
 │   └── utp.png
+├── nuevotema
+│   ├── contenido
+│   │   ├── uno.tex
+│   │   └── dos.tex
+│   ├── ref-nuevotema.tex
+│   ├── algo.tex
+│   └── contenido.tex
 ├── temauno
 │   ├── ref-temauno.tex
 │   └── subtema.tex
 ├── temados
 │   ├── ref-temados.tex
 │   └── subtema.tex
+├── conclusion.tex
 ├── estilos.tex
 ├── hipervinculos.tex
+├── introduccion.tex
 ├── main.tex
 ├── nuevos-comandos.tex
 ├── paquetes.tex
@@ -25,6 +34,10 @@ documento
 ├── renombrar-comandos.tex
 └── strings.txt
 ```
+
+## Diagrama de manejo de temas
+
+![diagrama-temas](imagenes/diagrama-latex-blanco.png)
 
 ## 📋 Lista de temas y subtemas
 
@@ -73,7 +86,7 @@ Los labels son nombrados `\label{lbl-alguntema}`, esto se debe a que para manten
 
 ## 🔗 Hipervinculos a temas y subtemas
 
-**NOTA:** Esto es opcional y está activo en la estructura base.
+**NOTA:** Esto es opcional y está inactivo en la estructura base.
 
 La lógica que maneja los hipervinculos se encuentra en el archivo `hipervinculos.tex`, el cual es importado dentro del archivo `nuevos-comandos.tex`.
 
