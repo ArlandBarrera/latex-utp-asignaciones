@@ -35,7 +35,7 @@ documento
 └── strings.txt
 ```
 
-## Diagrama de manejo de temas
+## 🏺 Diagrama de manejo de temas
 
 ![diagrama-temas](imagenes/diagrama-latex-blanco.png)
 
