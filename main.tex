@@ -1,3 +1,4 @@
+% Clase de documento: article, book, extbook
 \documentclass{extbook}
 
 % ------------------------------
@@ -16,6 +17,7 @@
 % Estilo titulo capitulo
 \input{estilos.tex}
 
+% Especifico de documento clase libro
 \mainmatter
 
 % ------------------------------
@@ -24,12 +26,16 @@
 
 \begin{document}
 
+% Portada personalizada
 \input{portada.tex}
+
+% Introduccion
 \input{introduccion.tex}
 
+% Listar contenido
 \tableofcontents
-%
-% -- Descomentar para habilitar --
+
+% ---------- Descomentar para habilitar ----------
 % \listoffigures
 % \listoftables
 % \listof{grafica}{Lista de gráficas}
@@ -38,12 +44,15 @@
 % Crear input de los temas de los capitulos
 \expandafter\itincap\expandafter{\temas}
 
+% Conclusion
 \input{conclusion.tex}
 
 % Bibliografia
-%
-% -- Descomentar para habilitar bibliografía --
+
+% ---------- Descomentar para habilitar bibliografia ----------
+% Estilo: IEEE, APA
 % \bibliographystyle{ieeetr}
+% referenciar archivo .bib
 % \bibliography{referencias}
 
 \end{document}
